@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM-1</title>
+</head>
+<body>
+    <form action="">
+        <h1>分数: <span id="score">100</span></h1>
+        <h3>一、填空题(每题3分)</h3>
+        <div>
+            <label for="blank">1.填空题 : </label>
+            <input type="text" name="blank" id="blank">
+        </div>
+        <p><input type="submit" name="btnSubmit" id="btnSubmit" onclick="" value="计分"></p>
+    </form>
+    <script>
+        let btn = document.getElementById("btnSubmit");
+        btn.addEventListener("click",function (e) {
+            e.preventDefault();
+
+            let blank = document.getElementById("blank");
+            let answer = blank.value;
+            alert(answer);
+
+            let score = document.getElementById('score');
+            score.innerHTML = "30";
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="myForm" method="" name="myForm" action="">
+
+    <h3>三、多选题(每题3分)</h3>
+    <p>1.多选题: <br><br>
+        <input type="checkbox" name="hobby" id="book" value="book"><label for="book">看书</label>
+        <input type="checkbox" name="hobby" id="net" value="net"><label for="net">上网</label>
+        <input type="checkbox" name="hobby" id="sleep" value="sleep"><label for="sleep">睡觉</label>
+    </p>
+
+    <p><input type="button" name="btnSubmit" id="btnSubmit" value="计分"></p>
+
+</form>
+
+<script>
+    let btn = document.getElementById("btnSubmit");
+    btn.addEventListener("click",function () {
+        let arr = [];
+
+        let checkbox = document.getElementsByName('hobby');
+//        console.log(checkbox);
+        for(let i = 0; i<checkbox.length;i++){
+            if(checkbox[i].checked){
+                arr.push(checkbox[i].value);
+            }
+        }
+
+        console.log(arr);
+        return arr;
+    })
+</script>
+</body>
+</html>

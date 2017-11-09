@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="myForm" method="" name="myForm" action="">
+
+    <p>2.单选题: <br><br>
+        <input type="radio" name="select" id="A" value="A"><label for="A">A. 酷</label><br>
+        <input type="radio" name="select" id="B" value="B"><label for="B">B. 码</label><br>
+        <input type="radio" name="select" id="C" value="C"><label for="C">C. 部</label><br>
+        <input type="radio" name="select" id="D" value="D"><label for="D">D. 落</label><br>
+    </p>
+
+    <p><input type="button" name="btnSubmit" id="btnSubmit" value="计分"></p>
+
+</form>
+</body>
+
+<script>
+    let btn = document.getElementById("btnSubmit");
+    btn.addEventListener("click",function () {
+        let radioSelect;
+        let radio = document.getElementsByName('select');
+        for(let i = 0; i<radio.length; i++){
+            if(radio[i].checked){
+                radioSelect  =radio[i].value
+            }
+        }
+        alert(radioSelect);
+    })
+</script>
+
+</html>

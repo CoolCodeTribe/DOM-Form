@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM-5</title>
+</head>
+<body>
+<form id="myForm" method="" name="myForm" action="">
+
+    <h3>四、简答题(每题5分)</h3>
+    <p>
+        <label for="comments">1.简答题:</label><br><br>
+        <textarea name="comments" id="comments" cols="30" rows="4"></textarea>
+    </p>
+    <p><input type="button" name="btnSubmit" id="btnSubmit" class="btnSubmit" value="计分"></p>
+</form>
+<script>
+    let btn = document.getElementById("btnSubmit");
+    btn.addEventListener("click",function () {
+        let texts = document.getElementById("comments");
+        let answer = texts.value;
+        alert(answer);
+    })
+</script>
+</body>
+</html>

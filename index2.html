@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM-2</title>
+</head>
+<body>
+    <form id="myForm" method="" name="myForm" action="">
+
+        <h3>二、单选题(每题3分)</h3>
+        <p>
+            <label for="color">1.请选择你最喜欢的颜色 : </label>
+            <select name="color" id="color">
+                <option value="red">红</option>
+                <option value="green">绿</option>
+                <option value="yellow">黄</option>
+            </select>
+        </p>
+        <p><input type="button" name="btnSubmit" id="btnSubmit" value="计分"></p>
+    </form>
+
+    <script>
+        let btn = document.getElementById("btnSubmit");
+        btn.addEventListener("click",function () {
+            let mySelect = document.getElementById('color');
+            let answer = mySelect.value;
+            alert(answer);
+        })
+    </script>
+</body>
+
+</html>
